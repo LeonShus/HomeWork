@@ -30,29 +30,6 @@
     padding-right: 10px;
 }
 
-/*.second::before {*/
-/*    border-bottom-left-radius: 0.8rem 0.7rem;*/
-/*    border-right: 1rem solid #248bf5;*/
-/*    left: -0.35rem;*/
-/*    top: -10px;*/
-/*    transform: translate(0, -0.1rem);*/
-/*}*/
-
-/*.second::before, .second::after {*/
-/*    bottom: -0.1rem;*/
-/*    content: "";*/
-/*    height: 1rem;*/
-/*    position: absolute;*/
-/*}*/
-
-/*.second::after {*/
-/*    background-color: #fff;*/
-/*    border-bottom-right-radius: 0.5rem;*/
-/*    left: 20px;*/
-/*    transform: translate(-30px, -30px);*/
-/*    width: 10px;*/
-/*}*/
-
 .second::before, .second::after {
     content: '';
     position: absolute;
