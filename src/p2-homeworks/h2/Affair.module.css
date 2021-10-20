@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    padding: 10px;
+}
+
+.container div:not(:first-child) {
+    margin-left: 35px;
+}
+
+.container button {
+    margin-left: 20px;
+}
+
+.low {
+    color: green;
+}
+.middle {
+    color: orangered;
+}
+.high {
+    color: red;
+}

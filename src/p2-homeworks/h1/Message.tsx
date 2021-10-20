@@ -15,11 +15,17 @@ function Message(props: MessageType) {
                 <img className={classes.avatar} src={props.avatar} alt="avatar"/>
             </div>
             <div className={classes.second}>
+
+                <div className={classes.a}></div>
+
                 <div className={classes.name}>{props.name}</div>
                 <div className={classes.message}>{props.message}</div>
                 <span className={classes.time}>{props.time}</span>
             </div>
         </div>
+
+
+
     )
 }
 

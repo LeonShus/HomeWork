@@ -8,6 +8,8 @@
 }
 
 .first {
+    position: relative;
+    top: 3px;
     align-self: end;
     margin-left: 5px;
 }
@@ -30,28 +32,43 @@
     padding-right: 10px;
 }
 
-.second::before, .second::after {
-    content: '';
+
+/*Like Ignat Do*/
+
+.a {
     position: absolute;
-}
-
-.second::before {
+    height: 16px;
+    width: 23px;
     z-index: 999;
-    border-bottom-right-radius: 0.5rem;
-    left: -12px;
+    background: radial-gradient(circle at 0 0, rgba(0 , 0, 0, 0) 15px, rgb(128, 128, 128) 5px);
+    left: -15px;
     top: 59px;
-    border-style: solid;
-    border-width: 0.4em 0.2em 0.4em 0.6rem;
-    border-color: #61dafb;
 }
 
-.second::after{
-    left: -15px;
-    top: 51px;
-    border-style: solid;
-    border-width: 0.5em 0.2em 1em 1.2em;
-    border-color: transparent transparent grey transparent;
-}
+/*Like I do*/
+
+/*.second::before, .second::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*}*/
+
+/*.second::before {*/
+/*    z-index: 999;*/
+/*    border-bottom-right-radius: 100%;*/
+/*    left: -16px;*/
+/*    top: 58px;*/
+/*    border-style: solid;*/
+/*    border-width: 0.5em 0.5em 0.5em 0.5rem;*/
+/*    border-color: #61dafb;*/
+/*}*/
+
+/*.second::after{*/
+/*    left: -15px;*/
+/*    top: 51px;*/
+/*    border-style: solid;*/
+/*    border-width: 0.5em 0.2em 1em 1.2em;*/
+/*    border-color: transparent transparent grey transparent;*/
+/*}*/
 
 .name {
     font-size: 1.1rem;
