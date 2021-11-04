@@ -1,12 +1,21 @@
 .superInput {
+    border: 1px solid gray;
+    background: white;
+    padding: 3px;
+    margin: 5px;
+    outline: 1px solid gray;
+    transition: outline-offset 150ms ease;
+}
 
+.superInput:focus {
+    outline-offset: 2px;
 }
 
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    background: rgba(255, 4, 4, 0.75);
 }
 
 .error {
     color: red;
+    font-size: 0.7rem;
 }

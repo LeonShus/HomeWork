@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from "react"
+import React, {ChangeEvent, useState, KeyboardEvent} from "react"
 import Greeting from "./Greeting"
 import {UserType} from "./HW3";
 
@@ -15,7 +15,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         let val = e.currentTarget.value
         setName(val)
 
-        val.trim() ? setError("") : setError("Incorect name")
+        val.trim() ? setError("") : setError("Incorrect name")
     }
 
     let trimName = name.trim()
@@ -23,6 +23,12 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         alert(`Hello ${trimName}!`)
         addUserCallback(trimName)
         setName("")
+    }
+
+    const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
+        if(e.key === 'Enter'){
+            addUser()
+        }
     }
 
     const totalUsers = users.length
@@ -34,6 +40,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             addUser={addUser}
             error={error}
             totalUsers={totalUsers}
+            onEnter={onEnter}
         />
     )
 }
