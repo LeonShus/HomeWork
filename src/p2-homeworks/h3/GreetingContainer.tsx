@@ -20,9 +20,12 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
 
     let trimName = name.trim()
     const addUser = () => {
-        alert(`Hello ${trimName}!`)
-        addUserCallback(trimName)
-        setName("")
+        if(trimName){
+            alert(`Hello ${trimName}!`)
+            addUserCallback(trimName)
+            setName("")
+        }
+
     }
 
     const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
