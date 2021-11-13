@@ -1,0 +1,39 @@
+.navContainer{
+    position: relative;
+    display: flex;
+    width: 240px;
+    left: -215px;
+    transition: 1s;
+}
+
+.navContainer:hover{
+    transform: translateX(200px);
+    transition: transform 1s;
+}
+
+.navContainer a {
+    text-decoration: none;
+    color: hotpink;
+    position: relative;
+    padding: 5px;
+}
+
+.navContainer a:hover {
+    color: purple;
+}
+
+.nav {
+    margin-left: 15px;
+    position: relative;
+    top: 7px;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    background-color: #61dafb;
+    font-size: 1.4rem;
+}
+
+.icon{
+    position: relative;
+    top: -7px;
+}
