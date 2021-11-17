@@ -1,0 +1,28 @@
+.editSpan {
+    font-family: system-ui;;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.editSpan:hover{
+    color: gray;
+    transition: color .5s;
+}
+.editSpan::before{
+    content: 'DoubleClick to Edit';
+    color: black;
+    position: absolute;
+    margin-left: 5px;
+    z-index: 999;
+    opacity: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: .7rem;
+    background-color: white;
+    padding: 3px;
+}
+.editSpan:hover::before{
+    opacity: 1;
+    margin-top: 1.5rem;
+    transition: 1s;
+    pointer-events: none;
+}
