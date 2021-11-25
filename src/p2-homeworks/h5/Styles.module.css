@@ -23,17 +23,8 @@
 }
 
 .nav {
-    margin-left: 15px;
-    position: relative;
-    top: 7px;
-    text-align: center;
-    height: 20px;
-    width: 20px;
-    background-color: #61dafb;
-    font-size: 1.4rem;
+    margin-left: 20px;
+    height: 22px;
+    width: 22px;
 }
 
-.icon{
-    position: relative;
-    top: -7px;
-}
