@@ -1,0 +1,11 @@
+.childCont{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0 5px 10px;
+}
+.mainCont{
+    max-width: 150px;
+}
+.btnCont{
+    display: flex;
+}
