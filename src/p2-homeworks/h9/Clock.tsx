@@ -30,6 +30,8 @@ function Clock() {
     if (date) {
         stringTime = [date.getHours(), date.getMinutes(), date.getSeconds()].map(el => el < 10 ? "0" + el : el).join(":")
         stringDate = [date.getDate(), date.getMonth(), date.getFullYear()].map(el => el < 10 ? "0" + el : el).join(".")
+        // stringTime = date.toLocaleTimeString()
+        // stringDate = date.toLocaleDateString()
     }
 
 
