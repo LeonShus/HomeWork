@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
-import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import React, {useState} from "react"
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton"
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
-    const [date, setDate] = useState<Date>(new Date)
-    const [show, setShow] = useState<boolean>(true)
+    const [date, setDate] = useState<Date>()
+    const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
         clearInterval(timerId)
@@ -18,21 +18,19 @@ function Clock() {
     }
 
     const onMouseEnter = () => {
-        // show
+        setShow(true)
     }
     const onMouseLeave = () => {
-        // close
+        setShow(false)
     }
 
-    const hours = date.getHours()
-    const min = date.getMinutes()
-    const sec = date.getSeconds()
-    const day = date.getDate()
-    const month = date.getMonth()
-    const year = date.getFullYear()
+    let stringTime = ''
+    let stringDate = ''
+    if(date){
+        stringTime = [date.getHours(), date.getMinutes(), date.getSeconds()].map(el => el < 10 ? "0" + el : el).join(":")
+        stringDate = [date.getDate(), date.getMonth(), date.getFullYear()].map(el => el < 10 ? "0" + el : el).join(".")
+    }
 
-    const stringTime = [hours, min, sec].map(el => el < 10 ? '0' + el : el).join(':') // fix with date
-    const stringDate = [day, month, year].map(el => el < 10 ? '0' + el : el).join('.') // fix with date
 
     return (
         <div>
