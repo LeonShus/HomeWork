@@ -13,7 +13,7 @@ function Clock() {
     const start = () => {
         stop()
         const id: number = window.setInterval(() => {
-            setDate(new Date)
+            setDate(new Date())
         }, 1000)
         setTimerId(id)
     }

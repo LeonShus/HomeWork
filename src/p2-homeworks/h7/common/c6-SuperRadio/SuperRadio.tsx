@@ -6,6 +6,7 @@ type DefaultRadioPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 type SuperRadioPropsType = DefaultRadioPropsType & {
     options?: any[]
     onChangeOption?: (option: any) => void
+    radioColor?: string
 }
 
 const SuperRadio: React.FC<SuperRadioPropsType> = (
@@ -22,14 +23,15 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
         onChangeOption(e.currentTarget.value)
     }
 
+    const radioColor = restProps.radioColor ? restProps.radioColor : 'black'
 // map options with key
     const mappedOptions: any[] = options ? options.map((o, i) => (
         <label key={name + "-" + i}>
             <Radio
                 sx={{
-                    color: "purple",
+                    color: radioColor,
                     "&.Mui-checked": {
-                        color: "purple",
+                        color: radioColor,
                     },
                 }}
                 // name, checked, value, onChange

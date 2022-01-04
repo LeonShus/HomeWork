@@ -21,3 +21,17 @@
 .some-text {
     color: darkslateblue;
 }
+
+.pink {
+    background: hotpink;
+}
+.pink-text {
+    color: #2e1f54;
+}
+
+.purple {
+    background: rebeccapurple;
+}
+.purple-text {
+    color: #ecec00;
+}
